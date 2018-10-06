@@ -29,7 +29,7 @@ const App = () => (
       <p><Link to="/films">Фильмы</Link></p>
       <p><Link to="/chesse">Шахматы</Link></p>
       <p><Link to="/tasks">Задачник</Link></p>
-      <p><Link to="/money">Задачник</Link></p>
+      <p><Link to="/money">Расчет з/п</Link></p>
       <hr />
     </nav>
 
