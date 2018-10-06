@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+h1{
+  text-align: center;
+}
+nav {
+
+  margin: 5px auto;
+  text-align: center;
+}
+
+nav p{
+  display:inline;
+  margin: 5px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+p{
+  font-size: 18px;
+}
+
+.field{
+  margin: 20px auto;
+  border: 1px solid green;
+  border-radius: 2px;
+  width: 330px;
+
+  text-align: center;
+}
+
+ input{
+  margin: 5px auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+ button{
+  margin: 20px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.osnova{
+  position: relative;
+  margin: auto;
+    text-align: center;
+}
+
+.change{
+  margin: 10px ;
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 30px;
+  background: blue;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.del{
+  margin:10px;
+  width: 100px;
+  height: 30px;
+  background: red;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.save{
+width: 150px;
+height: 30px;
+background: green;
+color: white;
+font-size: 18px;
+font-weight: bold;
+}
+
+
+
+table{
+
+  margin: 0 auto;
+}
+
+td{
+
+  border: 1px solid black;
+  height: 50px;
+  width:50px;
+
+}
