@@ -13,6 +13,7 @@ import {
 import Films from './js/Films.js'
 import Chesse from './js/ChesseDesk.js'
 import Tasks from './js/Tasks.js'
+import Worker from './js/moneyMath.js'
 
 const Home=()=>(
   <div>
@@ -28,6 +29,7 @@ const App = () => (
       <p><Link to="/films">Фильмы</Link></p>
       <p><Link to="/chesse">Шахматы</Link></p>
       <p><Link to="/tasks">Задачник</Link></p>
+      <p><Link to="/money">Задачник</Link></p>
       <hr />
     </nav>
 
@@ -36,6 +38,7 @@ const App = () => (
       <Route path="/films" component={Films} />
       <Route path="/chesse" component={Chesse} />
       <Route path="/tasks" component={Tasks} />
+      <Route path="/money" component={Worker} />
     </Switch>
   </div>
 )
