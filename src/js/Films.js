@@ -6,19 +6,18 @@ import {
   Link,
   HashRouter,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
+
+import dataFilms from '../data/FilmsData.js'
+
+
 
 //////////////////////////////////////////////
 
 class Films extends React.Component{
   constructor(){
     super()
-    this.state={film:[{name:"Harry Potter", yers:2001},
-                      {name:"The Lord of the Ring", yers:2001},
-                      {name:"Avengers", yers:2012},
-                      {name:"Venom", yers:2018},
-                      {name:"GodFather", yers:1972}
-                    ],
+    this.state={film:dataFilms,
                 valueName:"",
                 valueYers: ""
                 }
@@ -47,13 +46,14 @@ class Films extends React.Component{
     this.setState({film:this.state.film})
   }
 
+
   render(){
       const filmName=this.state.film.map((item,index)=>
                         <div className="field" key={index}>
                             <p>Название фильма: {item.name}</p>
                             <p>Год выхода: {item.yers}</p>
                             <button className="del" onClick={this.deleteFilm.bind(this,index)}>Удалить</button>
-                            <button className="change">Подробнее</button>
+                            <Link to={`/films/${item.id}`}><button className="change">Подробнее</button></Link>
                         </div>
                       )
 

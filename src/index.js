@@ -11,13 +11,22 @@ import {
 //////////////////////////////////////////////
 
 import Films from './js/Films.js'
+import eachFilm from './js/eachFilm.js'
 import Chesse from './js/ChesseDesk.js'
 import Tasks from './js/Tasks.js'
 import Worker from './js/moneyMath.js'
 
 const Home=()=>(
   <div>
-    <h1>JavaScript и React практика</h1>
+    <h1>Практика по:</h1>
+    <br/>
+    <ul>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>React-router</li>
+      <li>Webpack</li>
+    </ul>
+
   </div>
 )
 
@@ -33,9 +42,12 @@ const App = () => (
       <hr />
     </nav>
 
+
+
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path="/films" component={Films} />
+      <Route exact path="/films/" component={Films} />
+      <Route path="/films/:id" component={eachFilm} />
       <Route path="/chesse" component={Chesse} />
       <Route path="/tasks" component={Tasks} />
       <Route path="/money" component={Worker} />

@@ -44,9 +44,7 @@ p{
   margin: 20px;
 }
 
-li{
-  list-style-type: none;
-}
+
 
 .osnova{
   position: relative;
@@ -99,5 +97,10 @@ td{
 }
 
   .moneyTable{
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  li{
+    text-align: center;
+    font-size: 28px;
   }
