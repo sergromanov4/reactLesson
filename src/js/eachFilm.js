@@ -9,7 +9,9 @@ function eachFilm({match}) {
       }
     }
 
+
     return (
+      filmObj?
         <div className="field">
           <p>Название фильма:</p>
             <h2>
@@ -19,6 +21,8 @@ function eachFilm({match}) {
           <p>Фильм вышел в {filmObj.yers} году</p>
           <p>Описание: {filmObj.info}</p>
         </div>
+        :
+          <div className="field">У фильма пока нет описания</div>
     )
 }
 
