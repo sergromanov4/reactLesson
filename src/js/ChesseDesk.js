@@ -4,27 +4,47 @@ import ReactDOM from 'react-dom';
 class Chesse extends React.Component{
   constructor(){
     super()
-    this.state={numbColumn:2,
-                numbRaw:2,
-                flag:true}
+    this.state={
+        numbColumn:2,
+        numbRaw:2,
+        flag:true
+    }
   }
 
-  edit=()=>{
-    this.setState({flag:!this.state.flag})
+  edit(){
+    this.setState(
+        {
+            flag:!this.state.flag
+        }
+    )
   }
 
-  save=()=>{
-    this.refs.newColumn.value?
-      this.setState({numbColumn:this.refs.newColumn.value})
-      :
-      this.setState({numbColumn:this.refs.newColumn.placeholder})
+  save(){
+    this.refs.newColumn.value
+        ?   this.setState(
+                {
+                    numbColumn: this.refs.newColumn.value
+                }
+            )
+        :   this.setState(
+                {
+                    numbColumn:this.refs.newColumn.placeholder
+                }
+            )
 
-    this.refs.newRaw.value?
-      this.setState({numbRaw:this.refs.newRaw.value})
-      :
-      this.setState({numbRaw:this.refs.newRaw.placeholder})
+    this.refs.newRaw.value
+        ?   this.setState(
+                {
+                    numbRaw:this.refs.newRaw.value
+                }
+            )
+        :   this.setState({numbRaw:this.refs.newRaw.placeholder})
 
-    this.setState({flag:!this.state.flag})
+    this.setState(
+        {
+            flag:!this.state.flag
+        }
+    )
 
     this.sliceArr()
   }
@@ -85,11 +105,16 @@ class Columns extends React.Component{
     for(let i=0;i<this.props.numbColumn;i++){
       this.state.arrColumn[i]=" "
     }
-    const tdshka = this.state.arrColumn.map((item,index)=>
-    index%2==0?
-      <td key={index} style={{background:"white"}}>{item}</td>
-        :
-      <td key={index} style={{background:"black"}}>{item}</td>
+    const tdshka = this.state.arrColumn.map((item,index) => {
+        return index%2==0
+                ?   <td key={index} style={{background:"white"}}>
+                        {item}
+                    </td>
+                :   <td key={index} style={{background:"black"}}>
+                        {item}
+                    </td>
+    }
+
   )
 
   const tdshka1 = this.state.arrColumn.map((item,index)=>
