@@ -5,17 +5,19 @@ function eachFilm({match}) {
 
     for (var i = 0; i < dataFilms.length; i++) {
       if(dataFilms[i].id == match.params.id){
-        var x = dataFilms[i]
+        var filmObj = dataFilms[i]
       }
     }
 
     return (
         <div className="field">
-          <h2>Название фильма:
-              <p>{x.name}</p>
-          </h2>
-          <p>Фильм вышел в {x.yers} году</p>
-          <p>Описание: {x.info}</p>
+          <p>Название фильма:</p>
+            <h2>
+              <p>{filmObj.name}</p>
+            </h2>
+            <hr/>
+          <p>Фильм вышел в {filmObj.yers} году</p>
+          <p>Описание: {filmObj.info}</p>
         </div>
     )
 }
